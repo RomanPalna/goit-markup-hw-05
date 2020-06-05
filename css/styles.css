@@ -782,6 +782,9 @@ button {
   border-radius: 4px;
 
   padding: 6px 22px;
+
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
 }
 
 .portfolio__btn:hover,
@@ -797,11 +800,10 @@ button {
 
 .offer__item {
   min-width: 370px;
-}
-
-.offer__item {
   margin-right: 30px;
   margin-bottom: 30px;
+
+  transition: box-shadow 250ms var(--animation-timing-function);
 }
 
 .offer__item:nth-child(3n) {
@@ -821,6 +823,7 @@ button {
 
 .offer__thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .offer__text {
@@ -841,10 +844,14 @@ button {
   color: var(--link-seconary-color);
 
   opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation-timing-function),
+    opacity 250ms var(--animation-timing-function);
 }
 
-.offer__text:hover,
-.offer__text:focus {
+.offer__link:hover .offer__text,
+.offer__link:focus .offer__text {
+  transform: translateY(0);
   opacity: 1;
 }
 
