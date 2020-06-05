@@ -48,6 +48,16 @@ button {
 }
 
 /* Studio Header Styles */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--link-seconary-color);
+  z-index: 1;
+}
+
 .menu {
   display: block;
 
@@ -182,6 +192,10 @@ button {
 }
 
 /* Решения для бизнеса */
+
+main {
+  padding-top: 80px;
+}
 
 .hero {
   margin-bottom: 94px;
